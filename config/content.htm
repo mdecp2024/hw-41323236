@@ -73,7 +73,79 @@
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h3>w5</h3>
-<h1>HW 4</h1>
+<p>Strings, input(), and print()</p>
+<p>首先必須瞭解  Python 變數命名法則:</p>
+<p>必須以英文字母或 _ 作為開頭, 隨後可以接上任何數字、英文字母或 _</p>
+<p>但變數名稱區分英文字母的大小寫, 變數也可以使用中文命名, 但一般並不建議使用英文以外的多 byte 語系命名.</p>
+<p>String 為字串, 可以用單引號、雙引號或三引號隔開. 例如:</p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_314717">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py string">"this is a string's "</code> <code class="py plain">使用雙引號將字串區隔</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="py string">'this is a string'</code> <code class="py plain">使用單引號將字串區隔</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="py plain">當字串超過一行時, 可以使用三引號:</code></div>
+<div class="line number6 index5 alt1"> </div>
+<div class="line number7 index6 alt2"><code class="py comments">'''</code></div>
+<div class="line number8 index7 alt1"> </div>
+<div class="line number9 index8 alt2"><code class="py comments">這裡面是用來說明程式目的或紀錄</code></div>
+<div class="line number10 index9 alt1"> </div>
+<div class="line number11 index10 alt2"><code class="py comments">相關事項的多行文字</code></div>
+<div class="line number12 index11 alt1"> </div>
+<div class="line number13 index12 alt2"><code class="py comments">'''</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>print 與 for 重複迴圈</p>
+<p>help(print)</p>
+<p>help(range)</p>
+<p>與 ChatGPT 對話:</p>
+<p>可以解釋一下help(range) 傳回來的內容嗎?</p>
+<p>將 help(range) 傳回的內容貼給 ChatGPT, 然後問:</p>
+<p>可以舉例詳細說明以下 help(range) 傳回來的內容嗎? 然後貼上 help 傳回的資料.</p>
+<p>詢問 for i in range():</p>
+<p>如何解釋 Python 中的 for i in range(5):</p>
+<p>如何解釋 range(5) ?</p>
+<p>range(5) 是數列嗎?</p>
+<p>能夠生成從 0 到 4 的整數序列, 所以可以稱 range(5) 為甚麼?</p>
+<p data-pm-slice="0 0 []">請舉 10 個可以協助使用者理解 for range 與 print 等關鍵字的範例</p>
+<p data-pm-slice="0 0 []">請用 Python 的 for 跟 print 印出五行的 * 排列成的三角形金字塔, 也就是 * 在最中間, 第二行為正中央的 *** 然後第三行 *****, 總共五行<img alt="" height="253" src="/images/螢幕擷取畫面 2024-11-12 172550.png" width="499"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 設定總行數
+rows = 5
+
+for i in range(rows):
+    # 每行的空格數量
+    spaces = ' ' * (rows - i - 1)
+    # 每行的星號數量
+    stars = '*' * (2 * i + 1)
+    # 輸出該行
+    print(spaces + stars)
+</pre>
+<p data-pm-slice="0 0 []"><img alt="" height="194" src="/images/螢幕擷取畫面 2024-11-12 172808.png" width="442"/></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
