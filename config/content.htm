@@ -72,7 +72,79 @@
 <p>   </p>
 <p>我的作業:</p>
 <p></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oK5mrHdX0e8?si=AaeWeChZhwI7zt7U" title="YouTube video player" width="560"></iframe>   </p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oK5mrHdX0e8?si=AaeWeChZhwI7zt7U" title="YouTube video player" width="560"></iframe></p>
+<p>米字號圓:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import math
+
+def print_circle(radius, size):
+    # 圓心座標 (中心點)
+    center = size // 2
+    for y in range(size):
+        for x in range(size):
+            # 計算每個點與圓心的距離
+            distance = math.sqrt((x - center) ** 2 + (y - center) ** 2)
+            # 如果距離小於等於半徑，印出 "*"，否則印出空格
+            if distance &lt;= radius:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()  # 換行
+
+# 在 10x10 的區域中繪製半徑為 4 的圓形
+print_circle(radius=4, size=10)</pre>
+<p>黑色實心圓:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document as doc
+
+# 創建畫布
+canvas = html.CANVAS(width=400, height=400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 獲取畫布的 2D 繪圖上下文
+ctx = canvas.getContext("2d")
+
+# 每格的像素數
+gs = 20  # 每格的邊長
+
+# 繪製網格
+def grid(width, height, grid_pix):
+    """畫出網格"""
+    for i in range(width):
+        for j in range(height):
+            dRect(i * grid_pix, j * grid_pix, grid_pix, grid_pix, 1, "lightgrey")
+
+# 繪製矩形邊框
+def dRect(lux, luy, w, h, s=1, c="#ff0000"):
+    """繪製矩形的邊框"""
+    ctx.lineWidth = s
+    ctx.strokeStyle = c
+    ctx.beginPath()
+    ctx.rect(lux, luy, w, h)
+    ctx.stroke()
+
+# 填滿顏色
+def fill(x, y, color):
+    """填滿某個格子"""
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, gs, gs)
+
+# 繪製圓形
+def draw_circle(grid_width, grid_height, radius, grid_pix):
+    """在格子中繪製圓形"""
+    center_x, center_y = grid_width // 2, grid_height // 2  # 圓心的格子座標
+    for i in range(grid_width):
+        for j in range(grid_height):
+            # 計算該格子中心與圓心的距離
+            cell_center_x = i + 0.5
+            cell_center_y = j + 0.5
+            distance = ((cell_center_x - center_x) ** 2 + (cell_center_y - center_y) ** 2) ** 0.5
+            if distance &lt;= radius:
+                fill(i * grid_pix, j * grid_pix, "black")  # 填充圓形內的格子
+
+# 主程式
+grid(10, 10, gs)  # 畫 10x10 的網格
+draw_circle(10, 10, 4, gs)  # 在網格中繪製半徑為 4 的圓形</pre>
+<p><br/><br/>   </p>
 <p>我的心得:</p>
 <p>這次的作業,讓我知道可以利用<span>Brython來做出簡易的圖形跟符號,並且利用chatgpt將程式碼設計出來,再將程式碼存入個人 Gist,就有自己所設計出來的圖形程式碼,在解題的過程中,可能出來的圖形都不符合我想要的圖案,這時就要檢查chatgpt的問法有無錯誤,做出及時的更正</span></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
