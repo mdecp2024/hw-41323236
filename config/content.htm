@@ -159,7 +159,28 @@ I saw a dolphin
 </pre>
 <p></p>
 <p></p><h3>w13</h3>
-<p></p>
+<p>一個紅框:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=400, height=400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每一個正方形的邊長
+gs = 200  # 正方形的邊長，可以根據需要調整
+
+# 取得 canvas 的繪圖上下文
+ctx = canvas.getContext("2d")
+
+# 繪製第一個正方形，左上角為 (0, 0)
+ctx.lineWidth = 1
+ctx.strokeStyle = 'red'  # 第一個正方形的顏色是紅色
+ctx.beginPath()
+ctx.rect(0, 0, gs, gs)  # 設定正方形的大小和位置
+ctx.stroke()</pre>
+<p>兩個紅框:</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 
