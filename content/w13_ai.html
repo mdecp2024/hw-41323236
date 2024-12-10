@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='HW 1.html'>HW 1</a><ul class='dropdown'><li class='has-children'><a href='HW 1 Exam.html'>HW 1 Exam</a><ul class='dropdown'><li><a href='w7.html'>w7</a><li><a href='w6.html'>w6</a><li><a href='w10.html'>w10</a><li><a href='w11_hw.html'>w11_hw</a><li><a href='w12_hw.html'>w12_hw</a><li><a href='w13.html'>w13</a></li></li></ul></ul><li class='has-children'><a href='HW 2.html'>HW 2</a><ul class='dropdown'><li><a href='HW 2 Exam.html'>HW 2 Exam</a></li></ul><li class='has-children'><a href='HW 3.html'>HW 3</a><ul class='dropdown'><li class='has-children'><a href='HW 3 Exam.html'>HW 3 Exam</a><ul class='dropdown'><li><a href='w5.html'>w5</a></li></li></ul></ul><li class='has-children'><a href='HW 4.html'>HW 4</a><ul class='dropdown'><li><a href='HW 4 Exam.html'>HW 4 Exam</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Attendance.html'>Attendance</a><li class='has-children'><a href='HW 1.html'>HW 1</a><ul class='dropdown'><li class='has-children'><a href='HW 1 Exam.html'>HW 1 Exam</a><ul class='dropdown'><li><a href='w7.html'>w7</a><li><a href='w6.html'>w6</a><li><a href='w10.html'>w10</a><li><a href='w11_hw.html'>w11_hw</a><li><a href='w12_hw.html'>w12_hw</a><li><a href='w13_hw.html'>w13_hw</a><li><a href='w13_ai.html'>w13_ai</a></li></li></ul></ul><li class='has-children'><a href='HW 2.html'>HW 2</a><ul class='dropdown'><li><a href='HW 2 Exam.html'>HW 2 Exam</a></li></ul><li class='has-children'><a href='HW 3.html'>HW 3</a><ul class='dropdown'><li class='has-children'><a href='HW 3 Exam.html'>HW 3 Exam</a><ul class='dropdown'><li><a href='w5.html'>w5</a></li></li></ul></ul><li class='has-children'><a href='HW 4.html'>HW 4</a><ul class='dropdown'><li><a href='HW 4 Exam.html'>HW 4 Exam</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,114 +141,155 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2<br /><h1>w13</h1>
-<p>w13題目作業:</p>
-<p>請在下列圖形中的兩個正方形外圍, 以黑色畫筆畫圓, 並設法在各線條所圍成的封閉區域塗上不同顏色. 操作過程請拍攝影片, 並在頁面中列出作業心得.</p>
-<p><img alt="" height="116" src="./../images/螢幕擷取畫面 2024-12-10 193324.png" width="116"/></p>
+    <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2<br /><h1>w13_ai</h1>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Aj-t76HfqnA?si=10_6_SuQrMW5XY-e" title="YouTube video player" width="560"></iframe></p>
 <p>此作業做法的大致步驟:</p>
 <p><strong>1.引入模組與初始化畫布</strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
-from browser import document as doc
-
-# 設置畫布
-canvas = html.CANVAS(width=600, height=600)
-brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-</pre>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_60618">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py keyword">from</code> <code class="py plain">browser </code><code class="py keyword">import</code> <code class="py plain">html</code></div>
+<div class="line number2 index1 alt1"><code class="py keyword">from</code> <code class="py plain">browser </code><code class="py keyword">import</code> <code class="py plain">document as doc</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="py comments"># 設置畫布</code></div>
+<div class="line number5 index4 alt2"><code class="py plain">canvas </code><code class="py keyword">=</code> <code class="py plain">html.CANVAS(width</code><code class="py keyword">=</code><code class="py value">600</code><code class="py plain">, height</code><code class="py keyword">=</code><code class="py value">600</code><code class="py plain">)</code></div>
+<div class="line number6 index5 alt1"><code class="py plain">brython_div </code><code class="py keyword">=</code> <code class="py plain">doc[</code><code class="py string">"brython_div1"</code><code class="py plain">]</code></div>
+<div class="line number7 index6 alt2"><code class="py plain">brython_div &lt;</code><code class="py keyword">=</code> <code class="py plain">canvas</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p><strong>2. 設定繪圖上下文與線條寬度</strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx = canvas.getContext("2d")
-ctx.lineWidth = 1
-</pre>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_730412">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">ctx </code><code class="py keyword">=</code> <code class="py plain">canvas.getContext(</code><code class="py string">"2d"</code><code class="py plain">)</code></div>
+<div class="line number2 index1 alt1"><code class="py plain">ctx.lineWidth </code><code class="py keyword">=</code> <code class="py value">1</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
 <div class="sticky top-9 md:top-[5.75rem]">
 <div class="absolute bottom-0 right-2 flex h-9 items-center">
-<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><strong><span class="" data-state="closed"><span class="" data-state="closed">3.繪製兩個正方形</span></span></strong>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx.strokeStyle = 'red'
-ctx.beginPath()
-ctx.rect(100, 100, 200, 200)  # 正方形1
-ctx.rect(200, 200, 200, 200)  # 正方形2
-ctx.stroke()
-</pre>
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><strong><span class="" data-state="closed">3.繪製兩個正方形</span></strong>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_707922">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">ctx.strokeStyle </code><code class="py keyword">=</code> <code class="py string">'red'</code></div>
+<div class="line number2 index1 alt1"><code class="py plain">ctx.beginPath()</code></div>
+<div class="line number3 index2 alt2"><code class="py plain">ctx.rect(</code><code class="py value">100</code><code class="py plain">, </code><code class="py value">100</code><code class="py plain">, </code><code class="py value">200</code><code class="py plain">, </code><code class="py value">200</code><code class="py plain">)  </code><code class="py comments"># 正方形1</code></div>
+<div class="line number4 index3 alt1"><code class="py plain">ctx.rect(</code><code class="py value">200</code><code class="py plain">, </code><code class="py value">200</code><code class="py plain">, </code><code class="py value">200</code><code class="py plain">, </code><code class="py value">200</code><code class="py plain">)  </code><code class="py comments"># 正方形2</code></div>
+<div class="line number5 index4 alt2"><code class="py plain">ctx.stroke()</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <strong><span class="" data-state="closed">4.繪製對角線</span></strong></div>
 <div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary">
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx.strokeStyle = 'blue'
-ctx.beginPath()
-ctx.moveTo(100, 100)  # 起點
-ctx.lineTo(300, 300)  # 終點
-ctx.stroke()
-</pre>
-<span class="" data-state="closed">5. <strong>繪製兩個圓形</strong></span></div>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_940633">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">ctx.strokeStyle </code><code class="py keyword">=</code> <code class="py string">'blue'</code></div>
+<div class="line number2 index1 alt1"><code class="py plain">ctx.beginPath()</code></div>
+<div class="line number3 index2 alt2"><code class="py plain">ctx.moveTo(</code><code class="py value">100</code><code class="py plain">, </code><code class="py value">100</code><code class="py plain">)  </code><code class="py comments"># 起點</code></div>
+<div class="line number4 index3 alt1"><code class="py plain">ctx.lineTo(</code><code class="py value">300</code><code class="py plain">, </code><code class="py value">300</code><code class="py plain">)  </code><code class="py comments"># 終點</code></div>
+<div class="line number5 index4 alt2"><code class="py plain">ctx.stroke()</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<span class="" data-state="closed">5.<span> </span><strong>繪製兩個圓形</strong></span></div>
 <div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary">
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx.strokeStyle = 'black'
-ctx.beginPath()
-ctx.arc(200, 200, 141.4, 0, 2 * 3.14)  # 圓1
-ctx.stroke()
-ctx.beginPath()
-ctx.arc(300, 300, 141.4, 0, 2 * 3.14)  # 圓2
-ctx.stroke()
-</pre>
-<span class="" data-state="closed"><strong>6.定義點與形狀的關係函數</strong></span></div>
-<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><strong>(1)檢查點是否在圓內</strong>：</span></div>
-<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary">
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def point_in_circle1(x, y):
-    cx, cy, r = 200, 200, 141.4
-    return (x - cx) ** 2 + (y - cy) ** 2 &lt; r ** 2
-</pre>
-<span class="" data-state="closed">根據圓的公式 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><mi>c</mi><mi>y</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>&lt;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x - cx)^2 + (y - cy)^2 &lt; r^2</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace"></span><span class="mbin">−</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">x</span><span class="mclose">)<span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mopen">(</span><span class="mord mathnormal">y</span><span class="mspace"></span><span class="mbin">−</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord mathnormal">cy</span><span class="mclose">)<span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace"></span><span class="mrel">&lt;</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mord mathnormal">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 判斷點是否在圓1內。</span></div>
-<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><strong>(2)檢查點是否在正方形內或外</strong>：</span></div>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_689765">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="py plain">ctx.strokeStyle </code><code class="py keyword">=</code> <code class="py string">'black'</code></div>
+<div class="line number2 index1 alt1"><code class="py plain">ctx.beginPath()</code></div>
+<div class="line number3 index2 alt2"><code class="py plain">ctx.arc(</code><code class="py value">200</code><code class="py plain">, </code><code class="py value">200</code><code class="py plain">, </code><code class="py value">141.4</code><code class="py plain">, </code><code class="py value">0</code><code class="py plain">, </code><code class="py value">2</code> <code class="py keyword">*</code> <code class="py value">3.14</code><code class="py plain">)  </code><code class="py comments"># 圓1</code></div>
+<div class="line number4 index3 alt1"><code class="py plain">ctx.stroke()</code></div>
+<div class="line number5 index4 alt2"><code class="py plain">ctx.beginPath()</code></div>
+<div class="line number6 index5 alt1"><code class="py plain">ctx.arc(</code><code class="py value">300</code><code class="py plain">, </code><code class="py value">300</code><code class="py plain">, </code><code class="py value">141.4</code><code class="py plain">, </code><code class="py value">0</code><code class="py plain">, </code><code class="py value">2</code> <code class="py keyword">*</code> <code class="py value">3.14</code><code class="py plain">)  </code><code class="py comments"># 圓2</code></div>
+<div class="line number7 index6 alt2"><code class="py plain">ctx.stroke()</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="overflow-y-auto p-4" dir="ltr">
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def point_in_square1(x, y):
-    return 100 &lt;= x &lt;= 300 and 100 &lt;= y &lt;= 300
-</pre>
-<p>其他類似函數對點的方位進行分類（如：點是否在直線上方、下方，點是否在正方形上下左右）。</p>
-<p>7. <strong>取得點的屬性</strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def get_region(x, y):
-    regions = []
-    if point_in_circle1(x, y):
-        regions.append("circle1")
-    if point_in_square1(x, y):
-        regions.append("inside_square1")
-    # ...省略其他條件...
-    return regions
-</pre>
-<p>根據點的座標，判斷它位於哪些區域（例如：圓內、正方形內、正方形外、直線上）。</p>
-<p>8. <strong>決定著色區域</strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def get_region_color(x, y):
-    regions = get_region(x, y)
-    if "circle1" in regions and "circle2" in regions:
-        return "purple"
-    if "circle1" in regions and "inside_square1" in regions:
-        if point_above_line(x, y):
-            return "green"
-    # ...其他條件...
-    return None
-</pre>
-<p>根據區域屬性決定著色的顏色，例如：</p>
-<ul>
-<li>在兩個圓內：紫色。</li>
-<li>圓內且正方形內：綠色或黃色（根據直線上下）。</li>
-<li>其他條件決定不同顏色。</li>
-</ul>
-9. <strong>掃描畫布並著色</strong></div>
-<div class="overflow-y-auto p-4" dir="ltr">
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def scan_and_draw():
-    for y in range(0, canvas.height, 1):  # 每像素掃描
-        for x in range(0, canvas.width, 1):
-            color = get_region_color(x, y)
-            if color:
-                ctx.fillStyle = color
-                ctx.beginPath()
-                ctx.arc(x + 1, y + 1, 1, 0, 2 * 3.14)  # 用小點標示
-                ctx.fill()
-</pre>
 </div>
 </div>
-<p>10. <strong>執行掃描與繪製</strong></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">scan_and_draw()
-</pre>
-<p></p><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+</div>
+</div><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
