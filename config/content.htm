@@ -159,59 +159,113 @@ I saw a dolphin
 </pre>
 <p></p>
 <p></p><h3>w13</h3>
-<p>一個紅框:</p>
+<p>w13題目作業:</p>
+<p>請在下列圖形中的兩個正方形外圍, 以黑色畫筆畫圓, 並設法在各線條所圍成的封閉區域塗上不同顏色. 操作過程請拍攝影片, 並在頁面中列出作業心得.</p>
+<p><img alt="" height="116" src="/images/螢幕擷取畫面 2024-12-10 193324.png" width="116"/></p>
+<p>此作業做法的大致步驟:</p>
+<p><strong>1.引入模組與初始化畫布</strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width=400, height=400)
+# 設置畫布
+canvas = html.CANVAS(width=600, height=600)
 brython_div = doc["brython_div1"]
 brython_div &lt;= canvas
-
-# 每一個正方形的邊長
-gs = 200  # 正方形的邊長，可以根據需要調整
-
-# 取得 canvas 的繪圖上下文
-ctx = canvas.getContext("2d")
-
-# 繪製第一個正方形，左上角為 (0, 0)
+</pre>
+<p><strong>2. 設定繪圖上下文與線條寬度</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx = canvas.getContext("2d")
 ctx.lineWidth = 1
-ctx.strokeStyle = 'red'  # 第一個正方形的顏色是紅色
+</pre>
+<div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary dark:bg-gray-950">
+<div class="sticky top-9 md:top-[5.75rem]">
+<div class="absolute bottom-0 right-2 flex h-9 items-center">
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><strong><span class="" data-state="closed"><span class="" data-state="closed">3.繪製兩個正方形</span></span></strong>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx.strokeStyle = 'red'
 ctx.beginPath()
-ctx.rect(0, 0, gs, gs)  # 設定正方形的大小和位置
-ctx.stroke()</pre>
-<p>兩個紅框:</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
-from browser import document as doc
-
-# 利用 html 建立 canvas 超文件物件
-canvas = html.CANVAS(width=400, height=400)
-brython_div = doc["brython_div1"]
-brython_div &lt;= canvas
-
-# 每一個正方形的邊長
-gs = 200  # 正方形的邊長，可以根據需要調整
-
-# 取得 canvas 的繪圖上下文
-ctx = canvas.getContext("2d")
-
-# 繪製第一個正方形，左上角為 (0, 0)
-ctx.lineWidth = 1
-ctx.strokeStyle = 'red'  # 第一個正方形的顏色是紅色
-ctx.beginPath()
-ctx.rect(0, 0, gs, gs)  # 設定正方形的大小和位置
-ctx.stroke()
-
-# 繪製第二個正方形，左上角為 (100, 100)
-offset_x = 100
-offset_y = 100
-ctx.lineWidth = 1
-ctx.strokeStyle = 'red'  # 第二個正方形的顏色是紅色
-ctx.beginPath()
-ctx.rect(offset_x, offset_y, gs, gs)  # 設定第二個正方形的大小和位置
+ctx.rect(100, 100, 200, 200)  # 正方形1
+ctx.rect(200, 200, 200, 200)  # 正方形2
 ctx.stroke()
 </pre>
-<p><img alt="" height="273" src="/images/螢幕擷取畫面 2024-12-04 102959.png" width="303"/><br/><br/></p><h1>HW 2</h1>
+<strong><span class="" data-state="closed">4.繪製對角線</span></strong></div>
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx.strokeStyle = 'blue'
+ctx.beginPath()
+ctx.moveTo(100, 100)  # 起點
+ctx.lineTo(300, 300)  # 終點
+ctx.stroke()
+</pre>
+<span class="" data-state="closed">5. <strong>繪製兩個圓形</strong></span></div>
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ctx.strokeStyle = 'black'
+ctx.beginPath()
+ctx.arc(200, 200, 141.4, 0, 2 * 3.14)  # 圓1
+ctx.stroke()
+ctx.beginPath()
+ctx.arc(300, 300, 141.4, 0, 2 * 3.14)  # 圓2
+ctx.stroke()
+</pre>
+<span class="" data-state="closed"><strong>6.定義點與形狀的關係函數</strong></span></div>
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><strong>(1)檢查點是否在圓內</strong>：</span></div>
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def point_in_circle1(x, y):
+    cx, cy, r = 200, 200, 141.4
+    return (x - cx) ** 2 + (y - cy) ** 2 &lt; r ** 2
+</pre>
+<span class="" data-state="closed">根據圓的公式 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>y</mi><mo>−</mo><mi>c</mi><mi>y</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo>&lt;</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x - cx)^2 + (y - cy)^2 &lt; r^2</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace"></span><span class="mbin">−</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">x</span><span class="mclose">)<span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mopen">(</span><span class="mord mathnormal">y</span><span class="mspace"></span><span class="mbin">−</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord mathnormal">cy</span><span class="mclose">)<span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace"></span><span class="mrel">&lt;</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mord mathnormal">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 判斷點是否在圓1內。</span></div>
+<div class="flex items-center rounded bg-token-sidebar-surface-primary px-2 font-sans text-xs text-token-text-secondary dark:bg-token-main-surface-secondary"><span class="" data-state="closed"><strong>(2)檢查點是否在正方形內或外</strong>：</span></div>
+</div>
+</div>
+<div class="overflow-y-auto p-4" dir="ltr">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def point_in_square1(x, y):
+    return 100 &lt;= x &lt;= 300 and 100 &lt;= y &lt;= 300
+</pre>
+<p>其他類似函數對點的方位進行分類（如：點是否在直線上方、下方，點是否在正方形上下左右）。</p>
+<p>7. <strong>取得點的屬性</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def get_region(x, y):
+    regions = []
+    if point_in_circle1(x, y):
+        regions.append("circle1")
+    if point_in_square1(x, y):
+        regions.append("inside_square1")
+    # ...省略其他條件...
+    return regions
+</pre>
+<p>根據點的座標，判斷它位於哪些區域（例如：圓內、正方形內、正方形外、直線上）。</p>
+<p>8. <strong>決定著色區域</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def get_region_color(x, y):
+    regions = get_region(x, y)
+    if "circle1" in regions and "circle2" in regions:
+        return "purple"
+    if "circle1" in regions and "inside_square1" in regions:
+        if point_above_line(x, y):
+            return "green"
+    # ...其他條件...
+    return None
+</pre>
+<p>根據區域屬性決定著色的顏色，例如：</p>
+<ul>
+<li>在兩個圓內：紫色。</li>
+<li>圓內且正方形內：綠色或黃色（根據直線上下）。</li>
+<li>其他條件決定不同顏色。</li>
+</ul>
+9. <strong>掃描畫布並著色</strong></div>
+<div class="overflow-y-auto p-4" dir="ltr">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def scan_and_draw():
+    for y in range(0, canvas.height, 1):  # 每像素掃描
+        for x in range(0, canvas.width, 1):
+            color = get_region_color(x, y)
+            if color:
+                ctx.fillStyle = color
+                ctx.beginPath()
+                ctx.arc(x + 1, y + 1, 1, 0, 2 * 3.14)  # 用小點標示
+                ctx.fill()
+</pre>
+</div>
+</div>
+<p>10. <strong>執行掃描與繪製</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">scan_and_draw()
+</pre>
+<p></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
 <hr/>
